@@ -18,7 +18,7 @@ window.initMap = function() {
       stylers: [{color: '#bbb'}]
     }
   ], {
-    name: 'Dublin'
+    name: 'Wedding Shop'
   });
 
   var image = new google.maps.MarkerImage(
@@ -30,13 +30,13 @@ window.initMap = function() {
 
   var customMapTypeId = 'custom_style';
 
-  var brooklyn = {lat: 41.850, lng: -73.961};
+  var weddingShop = { lat: 59.966657, lng: 30.3114459};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 6,
+    zoom: 12,
     scrollwheel: false,
     streetViewControl: false,
     mapTypeControl: false,
-    center: brooklyn, // Brooklyn.
+    center: weddingShop, //Wedding Shop.
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
     }
@@ -45,8 +45,8 @@ window.initMap = function() {
   var marker = new google.maps.Marker({
     map: map,
     icon: image,
-    title: 'Brooklyn',
-    position: brooklyn
+    title: 'WeddingShop',
+    position: weddingShop
   });
 
   map.mapTypes.set(customMapTypeId, customMapType);
