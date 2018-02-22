@@ -7,7 +7,7 @@ namespace WeddingShop.Models
 {
     public class IndexViewModel
     {
-        //Properties with listS of products, divided by type
+        //Properties with lists of products, divided by type
         public IEnumerable<ProductViewModel> WeddingsList { get; set; }
         public IEnumerable<ProductViewModel> KidsList { get; set; }
         public IEnumerable<ProductViewModel> AccessoriesList { get; set; }

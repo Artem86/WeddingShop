@@ -1,24 +1,49 @@
-﻿// Configure bundling and minification for the project.
-// More info at https://go.microsoft.com/fwlink/?LinkId=808241
 [
   {
     "outputFileName": "wwwroot/css/site.min.css",
-    // An array of relative input file paths. Globbing patterns supported
     "inputFiles": [
-      "wwwroot/css/site.css"
+      "wwwroot/vendor/simple-line-icons/css/simple-line-icons.css",
+      "wwwroot/vendor/bootstrap/css/bootstrap.css",
+      "wwwroot/css/layout.css"
     ]
   },
   {
-    "outputFileName": "wwwroot/js/site.min.js",
+    "outputFileName": "wwwroot/css/index.min.css",
     "inputFiles": [
-      "wwwroot/js/site.js"
+      "wwwroot/css/animate.css",
+      "wwwroot/vendor/swiper/css/swiper.css",
+      "wwwroot/vendor/magnific-popup/magnific-popup.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/index.min.js",
+    "inputFiles": [
+      "wwwroot/js/components/gmap.js",
+      "wwwroot/js/components/maginific-popup.js",
+      "wwwroot/js/components/masonry.js",
+      "wwwroot/js/components/swiper.js",
+      "wwwroot/js/components/wow.js"
     ],
-    // Optionally specify minification options
     "minify": {
       "enabled": true,
       "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/vendor/index.plugins.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/jquery.easing.js",
+      "wwwroot/vendor/jquery.back-to-top.js",
+      "wwwroot/vendor/jquery.smooth-scroll.js",
+      "wwwroot/vendor/jquery.wow.min.js",
+      "wwwroot/vendor/swiper/js/swiper.jquery.js",
+      "wwwroot/vendor/magnific-popup/jquery.magnific-popup.min.js",
+      "wwwroot/vendor/masonry/imagesloaded.pkgd.min.js",
+      "wwwroot/vendor/masonry/jquery.masonry.pkgd.min.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 ]

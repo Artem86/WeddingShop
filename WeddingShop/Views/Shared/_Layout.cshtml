@@ -9,18 +9,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
-
-    <!-- GLOBAL MANDATORY STYLES -->
+    <!-- GLOBAL STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- THEME STYLES -->
-    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" />
-
+    <link href="~/css/site.min.css" rel="stylesheet" type="text/css" />
     <!-- PAGE LEVEL STYLES -->
     @await RenderSectionAsync("styles", false)
 </head>
@@ -36,11 +27,12 @@
     @await Html.PartialAsync("_Footer")
 
     <!-- JAVASCRIPTS -->
-    <!-- CORE PLUGINS -->
-    <script src="vendor/jquery.min.js" type="text/javascript"></script>
-    <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
+    <!-- GLOBAL JS -->
+    <script src="~/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="~/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/layout.js" type="text/javascript"></script>
+    <!-- PAGE LEVEL JS -->
     @await RenderSectionAsync("scripts", false)
 
 </body>

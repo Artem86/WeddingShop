@@ -9,6 +9,7 @@ namespace WeddingShop.Infrastructure.Interfaces
     public interface IProductData
     {
         IEnumerable<ProductViewModel> Products { get; set; }
+
         /// <summary>
         /// Gets list of Products, filtered by specified Type
         /// </summary>
@@ -20,7 +21,7 @@ namespace WeddingShop.Infrastructure.Interfaces
         /// Gets list with 3 random Products of specified Type
         /// </summary>
         /// <param name="type"></param>
-        /// <returns></returns>
+        /// <returns>list of 3 random Products of specified type</returns>
         IEnumerable<ProductViewModel> GetThreeRandomProducts(string type = "");
     }
 }
