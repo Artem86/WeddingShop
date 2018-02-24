@@ -12,12 +12,16 @@ var Layout = function () {
     }
 
     // handle on page scroll
-    var handleHeaderOnScroll = function() {
-        if ($(window).scrollTop() > 60) {
-            $("body").addClass("page-on-scroll");
-        } else {
-            $("body").removeClass("page-on-scroll");
+    var handleHeaderOnScroll = function () {
+        if (window.location.pathname == "/") {
+            if ($(window).scrollTop() > 60) {
+                $("body").addClass("page-on-scroll");
+            }
+            else {
+                $("body").removeClass("page-on-scroll");
+            }
         }
+        else $("body").addClass("page-on-scroll");
     }
 
     // Handle Header

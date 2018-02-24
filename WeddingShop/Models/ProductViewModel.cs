@@ -8,7 +8,8 @@ namespace WeddingShop.Models
     public class ProductViewModel
     {
         public string Header { get; set; }
-        public string Body { get; set; }
+        public string ShortBody { get; set; }
+        public string LongtBody { get; set; }
         public string Tag { get; set; }
         public string ImageAdress { get; set; }
         public string ProductType { get; set; }
