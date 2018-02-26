@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WeddingShop.Infrastructure.Implementations;
+using WeddingShop.Infrastructure.Interfaces;
 
 namespace WeddingShop
 {
@@ -22,6 +24,8 @@ namespace WeddingShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<INotificationSender, MailSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

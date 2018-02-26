@@ -6,14 +6,28 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WeddingShop.Infrastructure.Implementations;
+using WeddingShop.Infrastructure.Interfaces;
 using WeddingShop.Models;
 
 namespace WeddingShop.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly INotificationSender _notificationSender;
+
+        public HomeController(INotificationSender notificationSender)
+        {
+            _notificationSender = notificationSender;
+        }
         public IActionResult Index()
         {
+            _notificationSender.SendOrderNotification(new OrderViewModel {
+                Name = "super name",
+                Phone = "my phone",
+                Comment = "long comment",
+                Email = "mail@mail.ru"
+            });
             return View();
         }
 
